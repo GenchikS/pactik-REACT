@@ -1,1 +1,1 @@
-# pactik-REACT
+# pactik-react
