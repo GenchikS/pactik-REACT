@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 //  приклад 1
 // export default function Product({ name, imgUrl, price }) {
 //      return (
@@ -41,7 +43,6 @@
 // }
 // export default MailBox
 
-
 //  приклад методу map
 // export default function MailBox(){
 //   return (
@@ -51,7 +52,6 @@
 //       })}
 //       </div>
 // )}
-
 
 //  приклад позбирання масиву об'єктів
 // const favouriteBooks = [
@@ -81,7 +81,6 @@
 //   )
 // }
 
-
 //  приклад використання індекса масива, використовується крайні рідко
 // const favouriteBooks = [
 //   { name: "JS for beginners" },
@@ -97,15 +96,23 @@
 //   </ul>
 // );
 
+// приклад використання id key
+// export default function BookList({ books }){
+//   return (
+//     <ul>
+//       {books.map((book) => {
+//         return <li key={book.id}>{book.name}</li>;
+//       })}
+//     </ul>
+//   );
+// };
 
-export default function BookList({ books }){
-  return (
-    <ul>
-      {books.map((book) => {
-        return <li key={book.id}>{book.name}</li>;
-      })}
-    </ul>
-  );
-};
+export default function ClickCounter() {
+  const [clicks, setClicks] = useState(0);
 
+  const handleClick = () => {
+    setClicks(clicks + 1);
+  };
 
+  return <button onClick={handleClick}>Current: {clicks}</button>;
+}
