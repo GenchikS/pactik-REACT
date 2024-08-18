@@ -53,7 +53,7 @@ import { useState } from "react";
 //       </div>
 // )}
 
-//  приклад позбирання масиву об'єктів
+//  приклад розбирання масиву об'єктів
 // const favouriteBooks = [
 //   { id: "id-1", name: "JS for beginners" },
 //   { id: "id-2", name: "React basics" },
@@ -107,12 +107,13 @@ import { useState } from "react";
 //   );
 // };
 
-export default function ClickCounter() {
-  const [clicks, setClicks] = useState(0);
+//  приклад кліків дочерніх елементів окремо
+// export default function ClickCounter({ value, onUpData }) {
+  // const [clicks, setClicks] = useState(0);
+  // const handleClick = () => {
+  //   setClicks(clicks + 1);
+  // };
 
-  const handleClick = () => {
-    setClicks(clicks + 1);
-  };
-
-  return <button onClick={handleClick}>Current: {clicks}</button>;
-}
+// console.log("value", value)
+//   return <button onClick={ onUpData }>Current: { value }</button>;
+// }
