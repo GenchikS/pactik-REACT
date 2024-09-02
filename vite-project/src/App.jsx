@@ -43,7 +43,6 @@ import './App.css'
     {/* </div> */}
   // );
 // }
-// 8. приклад оновлення стану з об'єктом
 
 
 
@@ -116,13 +115,24 @@ export default function App() {
   // const [isOpen, setIsOpen] = useState(false)
 
   // const modal = () => {
-  //   // при визові modal робимо інверсію isOpen, так і чередуються кліки 
+  //   // при визові modal робимо інверсію isOpen, так і чередуються кліки
   //   setIsOpen(!isOpen);
   //   setClicks(click + 1);
   // }
 
+  // 8. приклад оновлення стану з об'єктом
+  // const [array, setArrey] = useState({
+  //   a: 1,
+  //   b: 1,
+  //   c: 1,
+  // });
 
-
+  // const upDateArrey = () => {
+  //   setArrey({
+  //     ...array,
+  //     b: array.b + 2
+  //   });
+  // }
   // приклад модального вікна
   // const [clicks, setClicks] = useState(0);
   // const [isOpen, setIsOpen] = useState(false);
@@ -178,10 +188,11 @@ export default function App() {
   // const [isOpen, setIsOpen] = useState(false);
 
   // приклад з встановленням залежності
-  // const [clicks, setClicks] = useState(0);
-  // useEffect(() => {
-  //   console.log("Clicks updated: ", clicks);
-  // }, [clicks]);
+  const [clicks, setClicks] = useState(0);
+  
+  useEffect(() => {
+    console.log("Clicks updated: ", clicks);
+  }, [clicks]);
 
   // приклад використання залежнеості
   // const [clicks, setClicks] = useState(0);
@@ -204,6 +215,7 @@ export default function App() {
 
   return (
     <div>
+      {/* <h1>Books of the week</h1> */}
       {/* <h1>Best selling</h1>
       <Product
         name="Tacos With Lime"
@@ -219,10 +231,7 @@ export default function App() {
       {/* {[1, 2, 3].map((item) => {
         return <p>{item}</p>;
       })} */}
-      <>
-        <h1>Books of the week</h1>
-        {/* <BookList books={favouriteBooks} /> */}
-      </>
+      <>{/* <BookList books={favouriteBooks} /> */}</>
       {/* 1. приклад побудови кнопки + додаток вгорі*/}
       <>{/* <button onClick={upClick}>Click Me</button> */}</>
       {/* 2. приклад побудови кнопки та передача аргументу + додаток вгорі*/}
@@ -270,13 +279,8 @@ export default function App() {
           Hello end
         </p>
       </Toggler> */}
-    {/* 8. приклад оновлення стану з об'єктом */}
-
-
-
-
-
-      
+      {/* 8. приклад оновлення стану з об'єктом */}
+      {/* <button onClick={upDateArrey}>Update Arrey { array.b + array.c}</button> */}
 
       {/* приклад кліків дочерніх елементів окремо */}
       {/* якщо передати пропсами value та ф-цію, то можна змінити кліки окремо, але зі спільним батьком */}
@@ -307,9 +311,9 @@ export default function App() {
         {isOpen && <p>Now you can see me!</p>}
       </div> */}
       {/* приклад з встановленням залежності*/}
-      {/* <button onClick={() => setClicks(clicks + 1)}>
+      <button onClick={() => setClicks(clicks + 1)}>
         You clicked {clicks} times
-      </button> */}
+      </button>
       {/* приклад з встановленням залежності та декількох ефектів */}
       {/* <>
           <button onClick={() => setFirst(first + 1)}>First: {first}</button>
