@@ -188,11 +188,11 @@ export default function App() {
   // const [isOpen, setIsOpen] = useState(false);
 
   // приклад з встановленням залежності
-  const [clicks, setClicks] = useState(0);
+  // const [clicks, setClicks] = useState(0);
   
-  useEffect(() => {
-    console.log("Clicks updated: ", clicks);
-  }, [clicks]);
+  // useEffect(() => {
+  //   console.log("Clicks updated: ", clicks);
+  // }, [clicks]);
 
   // приклад використання залежнеості
   // const [clicks, setClicks] = useState(0);
@@ -311,9 +311,9 @@ export default function App() {
         {isOpen && <p>Now you can see me!</p>}
       </div> */}
       {/* приклад з встановленням залежності*/}
-      <button onClick={() => setClicks(clicks + 1)}>
+      {/* <button onClick={() => setClicks(clicks + 1)}>
         You clicked {clicks} times
-      </button>
+      </button> */}
       {/* приклад з встановленням залежності та декількох ефектів */}
       {/* <>
           <button onClick={() => setFirst(first + 1)}>First: {first}</button>

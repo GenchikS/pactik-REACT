@@ -21,25 +21,25 @@ import { SearchForm } from "./SearchForm";
 // }
         
 //  приклад відеоплеєру, сам код нище
-const Player = ({ source }) => {
-  const playerRef = useRef();
+// const Player = ({ source }) => {
+//   const playerRef = useRef();
 
-  const play = () => playerRef.current.play();
+//   const play = () => playerRef.current.play();
 
-  const pause = () => playerRef.current.pause();
+//   const pause = () => playerRef.current.pause();
 
-  return (
-    <div>
-      <video ref={playerRef} src={source}>
-        Sorry, your browser does not support embedded videos.
-      </video>
-      <div>
-        <button onClick={play}>Play</button>
-        <button onClick={pause}>Pause</button>
-      </div>
-    </div>
-  );
-};        
+//   return (
+//     <div>
+//       <video ref={playerRef} src={source}>
+//         Sorry, your browser does not support embedded videos.
+//       </video>
+//       <div>
+//         <button onClick={play}>Play</button>
+//         <button onClick={pause}>Pause</button>
+//       </div>
+//     </div>
+//   );
+// };        
 
 export default function Pr4() {
   //   const [articles, setArticles] = useState([]);
@@ -58,30 +58,25 @@ export default function Pr4() {
   //     setLoading(false);
   //   }
   // };
-  //   return (
-  //     <div>
-  //       <h1>Latest articles</h1>
-  //       <SearchForm onSearch={handleSearch} />
-  //       {loading && <p>Loading data, please wait...</p>}
-  //       {error && (
-  //         <p>Whoops, something went wrong! Please try reloading this page!</p>
-  //       )}
-  //       {articles.length > 0 && <Articles items={articles} />}
-  //     </div>
-  //   );
+    // return (
+    //   <div>
+    //     <h1>Latest articles</h1>
+    //     <SearchForm onSearch={handleSearch} />
+    //     {loading && <p>Loading data, please wait...</p>}
+    //     {error && (
+    //       <p>Whoops, something went wrong! Please try reloading this page!</p>
+    //     )}
+    //     {articles.length > 0 && <Articles items={articles} />}
+    //   </div>
+    // );
   //  приклад стану та map
-  //  const [planets, setPlanets] = useState([
-  //    "Earth",
-  //    "Mars",
-  //    "Jupiter",
-  //    "Venus",
-  //  ]);
+  //  const [planets, setPlanets] = useState(["Earth","Mars","Jupiter","Venus",]);
   //  const [query, setQuery] = useState("");
   //  const filteredPlanets = planets.filter((planet) => planet.includes(query));
   //  return (
   //    <ul>
   //      {filteredPlanets.map((planet) => (
-  //        <li key={planet}>{planet}</li>
+  //        <li key={planet.id}>{planet}</li>
   //      ))}
   //    </ul>
   //  );

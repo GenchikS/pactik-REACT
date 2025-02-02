@@ -13,12 +13,12 @@ import { Provider } from "react-redux";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <BrowserRouter> */}
-    <App />
+    {/* <App /> */}
     {/* <Pr3 /> */}
     {/* <Pr4 /> */}
     {/* <Pr5 /> */}
     {/* <Provider store={store}> */}
-      {/* <Pr6 /> */}
+      <Pr6 />
     {/* </Provider> */}
     {/* </BrowserRouter> */}
   </StrictMode>
